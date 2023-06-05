@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const dev_num='dev';
+        const test_num='test';
+        const stage_num='stage';
+        const prod_num='prod';
+        let env='dev';
+        const sending_amt=100;
+        let total_price;
+        if (env=='dev')
+        {
+            total_price=sending_amt+(sending_amt*10/100);
+
+        } 
+        else if (env='test')
+        {
+            total_price=sending_amt+(sending_amt*20/100);
+        }
+        else if (env='stage')
+        {
+            total_price=sending_amt+(sending_amt*30/100);
+        }
+        switch(env)
+        {
+            case dev_num:total_price=sending_amt+(sending_amt*10/100);
+            break;
+            case test_num:total_price=sending_amt+(sending_amt*20/100);
+            break;
+            case stage_num:total_price=sending_amt+(sending_amt*30/100);
+            break;
+        }
+        console.log(total_price)
+
+    </script>
+    
+</body>
+</html>
