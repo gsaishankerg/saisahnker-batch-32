@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h1>prototype value</h1>
+        <script>
+            Array.prototype.secondsmallest=function()
+            {
+                return this.sort((a,b)=>a-b)[1]
+            };
+            var arr =[23,65,76,98,41];
+            console.log(arr.secondsmallest());
+        </script>  
+        </body>
+</html>
